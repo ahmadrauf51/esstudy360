@@ -4,22 +4,24 @@
 @include('partials/hero')
 <div class="contrainer-fluid">
     <div class="py-5 category">
-        <div class="category-header mt-5 mb-3">
-            <img src="public/img/categories/coding.png" width="80" alt="">
+        <div class="category-header mt-2 mb-3">
+            <img src="{{asset('img/categories/coding.png')}}" width="80" alt="">
             Web Development
         </div>
         <!--  Category items -->
-        <div class="row">
-            @for($j=1;$j<=12;$j++)
-            <div class="col-md-3">
-                <div class="category-item">
-                    <a href="#">
-                        <img src="public/img/categories/sub/angularjs4.png" class="align-center" alt="">
-                        <p class="text-center">Angular 4 Js</p>
-                    </a>
+        <div class="container-fluid">
+            <div class="row">
+                @foreach($categories as $category)
+                <div class="col-4 col-md-2">
+                    <div class="category-item">
+                        <a href="#">
+                            <img src="{{asset('img/categories/sub').'/'.$category->image_path}}" class="align-center" alt="">
+                            <p class="text-center">{{$category->title}}</p>
+                        </a>
+                    </div>
                 </div>
+                @endforeach
             </div>
-            @endfor
         </div>
     </div>
 </div>

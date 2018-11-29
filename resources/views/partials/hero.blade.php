@@ -13,13 +13,13 @@
       <div class="one-half align-self-md-end align-self-sm-center">
         <div class="slider-carousel owl-carousel">
             <div class="item">
-                  <img src="public/asset/images/dashboard_full_1.png" class="img-fluid img"alt="">
+                  <img src="{{asset('asset/images/dashboard_full_1.png')}}" class="img-fluid img"alt="">
               </div>
               <div class="item">
-                  <img src="public/asset/images/dashboard_full_2.png" class="img-fluid img"alt="">
+                  <img src="{{asset('asset/images/dashboard_full_2.png')}}" class="img-fluid img"alt="">
               </div>
               <div class="item">
-                  <img src="public/asset/images/dashboard_full_3.png" class="img-fluid img"alt="">
+                  <img src="{{asset('asset/images/dashboard_full_3.png')}}" class="img-fluid img"alt="">
               </div>
           </div>
       </div>

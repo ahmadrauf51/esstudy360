@@ -6,7 +6,7 @@
             <div class="col-xs-12 col-md-6">
                 <div class="categories-box">
                     <div class="categories-header">
-                        <img src="public/img/categories/{{$category->image_path}}" class="pr-2" width="50" alt="">
+                        <img src="{{asset('img/categories').'/'.$category->image_path}}" class="pr-2" width="50" alt="">
                         {{$category->name}}
                     </div>
                     <div class="categories-body">
@@ -16,7 +16,7 @@
                             <div class="col-4 col-md-2">
                                 <div class="d-flex justify-content-center categories-item">
                                     <a href="/###">
-                                        <img src="public/img/categories/sub/{{$subcategory->image_path}}" width="80" alt="">
+                                        <img src="{{asset('img/categories/sub').'/'.$subcategory->image_path}}" width="80" alt="">
                                         <p>{{$subcategory->title}}</p>
                                     </a>
                                 </div>
