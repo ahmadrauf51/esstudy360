@@ -10794,6 +10794,7 @@ textarea.form-control {
 }
 .sidebar-content {
     padding-left: 15px;
+    padding-bottom:  30px;
 }
 .sidebar .sidebar-nav ul {
     padding: 0;
@@ -10808,11 +10809,13 @@ textarea.form-control {
 }
 /*  main content column */
 .page-content h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 /* ads column */
-
+.ads-bar {
+    padding-top: 11px;
+}
 
 
 
