@@ -7,9 +7,10 @@ use App\SubCategory;
 
 class CategoryController extends Controller
 {
-    public function index($category,$id)
+    public function index($slug)
     {
-        $categories = SubCategory::where('category_id', $id)->get();
+        $categories = Category::where('slug', $slug)->with('subcategory')->get();
+        // return $categories;
         return view('category.index', compact('categories'));
     }
 }

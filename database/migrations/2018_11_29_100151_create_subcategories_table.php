@@ -18,6 +18,8 @@ class CreateSubcategoriesTable extends Migration
             $table->integer('category_id');
             $table->string('title');
             $table->string('image_path');
+            $table->text('default_page');
+            $table->string('slug');
             $table->timestamps();
         });
     }

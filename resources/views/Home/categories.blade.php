@@ -15,15 +15,15 @@
                             @foreach($category->subcategory as $subcategory)
                             <div class="col-4 col-md-2">
                                 <div class="d-flex justify-content-center categories-item">
-                                    <a href="/###">
-                                        <img src="{{asset('img/categories/sub').'/'.$subcategory->image_path}}" width="80" alt="">
+                                    <a href="{{$subcategory->slug}}">
+                                        <img src="{{asset('img/categories/sub').'/'.$subcategory->image_path}}" width="60" alt="">
                                         <p>{{$subcategory->title}}</p>
                                     </a>
                                 </div>
                             </div>
                             @endforeach
                         </div> <!--  row -->
-                        <p class="pb-1 mx-3 text-right text-muted view-all"><a href="{{str_slug($category->name).'/'.$category->id}}">View all</a></p>
+                        <p class="pb-1 mx-3 text-right text-muted view-all"><a href="view-all/{{str_slug($category->slug)}}">View all</a></p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @extends('layout/master')
-@section('title') Page @endsection
+@section('title') Post @endsection
 @section('nav-class') navbar-rev @endsection
 @section('content')
 <div class="container-fluid">

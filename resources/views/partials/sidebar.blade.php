@@ -1,12 +1,14 @@
 <!-- Sidebar -->
 <div class="sidebar">
     <div class="sidebar-content pt-md-5">
-        <div class="sidebar-header">Angular Js Tutroial</div>
+        <div class="sidebar-header">{{$subcategory->title}} Tutroial</div>
         <div class="sidebar-nav">
             <ul class="list-unstyled">
-                @for($i=1; $i<=20;$i++)
-                <li><a href="#">Menu {{$i}}</a></li>
-                @endfor
+                @foreach($subcategory->posts as $post)
+                <li>
+                    <a href="{{$post->slug}}">{{$post->title}}</a>
+                </li>
+                @endforeach
             </ul>
         </div>
     </div>

@@ -1,22 +1,23 @@
 @extends('layout/master')
-@section('title') Beginner Guide For Programming @endsection
+@section('title') Category @endsection
 @section('content')
 @include('partials/hero')
 <div class="contrainer-fluid">
+    @foreach($categories as $category)
     <div class="py-5 category">
         <div class="category-header mt-2 mb-3">
-            <img src="{{asset('img/categories/coding.png')}}" width="80" alt="">
-            Web Development
+            <img src="{{asset('img/categories').'/'.$category->image_path}}" width="80" alt="">
+            {{$category->name}}
         </div>
         <!--  Category items -->
         <div class="container-fluid">
             <div class="row">
-                @foreach($categories as $category)
+                @foreach($category->subcategory as $subcategory)
                 <div class="col-4 col-md-2">
                     <div class="category-item">
-                        <a href="#">
-                            <img src="{{asset('img/categories/sub').'/'.$category->image_path}}" class="align-center" alt="">
-                            <p class="text-center">{{$category->title}}</p>
+                        <a href="{{Route('subcategory', $subcategory->slug)}}">
+                            <img src="{{asset('img/categories/sub').'/'.$subcategory->image_path}}" class="align-center" alt="">
+                            <p class="text-center">{{$subcategory->title}}</p>
                         </a>
                     </div>
                 </div>
@@ -24,5 +25,6 @@
             </div>
         </div>
     </div>
+    @endforeach
 </div>
 @endsection

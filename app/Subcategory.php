@@ -12,4 +12,9 @@ class Subcategory extends Model
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+    // Get All posts that are belongs to sub category
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'subcategory_id');
+    }
 }

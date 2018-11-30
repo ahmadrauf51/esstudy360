@@ -17,6 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('image_path');
+            $table->string('slug');
             $table->boolean('active')->default('1');
             $table->timestamps();
         });
